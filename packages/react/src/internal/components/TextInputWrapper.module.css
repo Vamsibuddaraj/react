@@ -39,7 +39,7 @@
     outline-offset: -1px;
   }
 
-  > textarea {
+  >textarea {
     padding: var(--base-size-12);
   }
 
@@ -52,13 +52,13 @@
   &:where([data-disabled]) {
     color: var(--fgColor-disabled);
     background-color: var(--control-bgColor-disabled);
-    border-color: var(--control-borderColor-disabled);
-    box-shadow: none;
+    /* border-color: var(--control-borderColor-disabled); */
+    /* box-shadow: none; */
 
     input,
     textarea,
     select {
-      cursor: not-allowed;
+      /* cursor: auto; */
     }
   }
 
@@ -84,7 +84,7 @@
 
   &:where([data-block]) {
     display: flex;
-    width: 100%;
+    width: 50%;
     align-self: stretch;
   }
 
@@ -93,7 +93,8 @@
     font-size: var(--text-body-size-medium);
   }
 
-  --inner-action-size: var(--base-size-24); /* Default size */
+  --inner-action-size: var(--base-size-24);
+  /* Default size */
 
   &:where([data-size='small']) {
     --inner-action-size: var(--base-size-20);
@@ -153,8 +154,8 @@
   padding-right: 0;
   padding-left: 0;
 
-  > input,
-  > select {
+  >input,
+  >select {
     padding-right: 0;
     padding-left: 0;
   }
@@ -165,12 +166,17 @@
   /* For form validation. This keeps images 8px from right and centered vertically. */
   background-position: right 8px center;
 
-  & > :not(:last-child) {
+  &> :not(:last-child) {
     margin-right: var(--base-size-8);
   }
 
-  & :global(.TextInput-icon) /* stylelint-disable-line selector-class-pattern */,
-  & :global(.TextInput-action)  /* stylelint-disable-line selector-class-pattern */ {
+  & :global(.TextInput-icon)
+  /* stylelint-disable-line selector-class-pattern */
+  ,
+  & :global(.TextInput-action)
+
+  /* stylelint-disable-line selector-class-pattern */
+    {
     align-self: center;
     color: var(--fgColor-muted);
     flex-shrink: 0;
@@ -216,6 +222,16 @@
   }
 
   &:where([data-trailing-visual]:not([data-trailing-action])) {
+    padding-right: var(--base-size-12);
+  }
+
+  &:where(:not([data-leading-visual]))>input,
+  &:where(:not([data-leading-visual]))>select {
+    padding-left: var(--base-size-12);
+  }
+
+  &:where(:not([data-trailing-visual]):not([data-trailing-action]))>input,
+  &:where(:not([data-trailing-visual]):not([data-trailing-action]))>select {
     padding-right: var(--base-size-12);
   }
 }
