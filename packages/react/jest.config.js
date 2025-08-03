@@ -95,6 +95,7 @@ module.exports = {
     '<rootDir>/src/__tests__/theme.test.ts',
     '<rootDir>/src/__tests__/themeGet.test.ts',
     '<rootDir>/src/__tests__/useSafeTimeout.test.ts',
+    '<rootDir>/src/experimental/IssueLabel',
     '<rootDir>/src/__tests__/deprecated/ActionList.test.tsx',
     '<rootDir>/src/__tests__/deprecated/FilteredSearch.test.tsx',
     '<rootDir>/src/deprecated/UnderlineNav/UnderlineNavLink.test.tsx',

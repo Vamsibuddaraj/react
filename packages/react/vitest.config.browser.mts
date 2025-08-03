@@ -105,6 +105,7 @@ export default defineConfig({
       'src/__tests__/filterObject.test.ts',
       'src/__tests__/theme.test.ts',
       'src/__tests__/themeGet.test.ts',
+      'src/experimental/IssueLabel/**/*.test.?(c|m)[jt]s?(x)',
       'src/__tests__/deprecated/ActionList.test.tsx',
       'src/__tests__/deprecated/FilteredSearch.test.tsx',
       'src/deprecated/UnderlineNav/UnderlineNavLink.test.tsx',

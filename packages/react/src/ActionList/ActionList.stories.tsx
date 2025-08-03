@@ -111,7 +111,7 @@ ItemPlayground.argTypes = {
   },
   active: {
     control: {
-      type: 'boolean',
+      type: 'boolean', //hello
     },
   },
   disabled: {

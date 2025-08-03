@@ -13,8 +13,7 @@
     "clean:all": "npm run clean && rimraf node_modules packages/*/node_modules examples/*/node_modules",
     "format": "prettier --cache --write '**/*.{js,css,md,mdx,ts,tsx,yml}'",
     "format:diff": "prettier --cache --list-different '**/*.{js,css,md,mdx,ts,tsx,yml}'",
-    "start": "concurrently npm:start:*",
-    "start:storybook": "npm run start:storybook -w @primer/react",
+    "start": "npm run start:storybook -w @primer/react",
     "build:storybook": "script/build-storybook",
     "build:docs": "NODE_OPTIONS=--openssl-legacy-provider script/build-docs",
     "build:docs:preview": "NODE_OPTIONS=--openssl-legacy-provider script/build-docs preview",
@@ -90,7 +89,8 @@
     "stylelint": "16.20.0",
     "typescript": "^5.8.2",
     "typescript-eslint": "^8.33.0",
-    "vitest": "^3.2.0"
+    "vitest": "^3.2.0",
+    "cross-env": "^7.0.3"
   },
   "optionalDependencies": {
     "@rollup/rollup-linux-x64-gnu": "^4.45.1"
